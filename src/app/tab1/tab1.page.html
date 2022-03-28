@@ -1,17 +1,48 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-title>
-      Tab 1
+      Profile
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <section class="details">
+          <div class="img">
+          <img src="assets/profile.jpg">
+          </div>
+          <div>
+           <h3>Reynaldo B. Ellaso Jr</h3>
+           
+           <a href="faceboook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+           <a href="gmail.com"><ion-icon name="mail-outline"></ion-icon></a>
+           <a href="github.com"><ion-icon name="logo-github"></ion-icon></a>
+           <a href="instagram.com"><ion-icon name="logo-instagram"></ion-icon></a>
+          </div>
+  </section>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About Me</ion-card-title>
+    </ion-card-header>
+   <ion-card-content>
+      I am a typical person who really loved to draw and playing guitar. And as a student taking up taking the course of Bacheclor of Science in Information Technology, I also wanted to enhance my skills in terms of programming and web developing.
+      </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Address</ion-card-title>
+    </ion-card-header>
+   <ion-card-content>
+      Brgy. Balud Barugo, Leyte
+      </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>School</ion-card-title>
+    </ion-card-header>
+   <ion-card-content>
+      Eastern Visayas State University - Carigara Campus
+      </ion-card-content>
+  </ion-card>
 </ion-content>
