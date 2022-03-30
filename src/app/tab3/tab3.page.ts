@@ -29,7 +29,7 @@ export class Tab3Page {
       header: 'Are You Sure You Want To Delete?',
       buttons: [
         {
-          text: 'Delete',
+          text: 'Yes',
           role: 'destructive',
           handler: () => {
 
