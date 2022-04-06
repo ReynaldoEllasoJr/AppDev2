@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { AlertController, ToastController } from '@ionic/angular';
-
+import { Router } from '@angular/router';
 
 
 
@@ -19,11 +19,13 @@ export class Tab3Page {
    
   ]
 
-
-
-
-  constructor(public alertController: AlertController, public toastController: ToastController ) {
+  constructor(public alertController: AlertController, public toastController: ToastController,public router: Router ) {
   }
+  redirectTo() {
+    this.router.navigateByUrl('/mailpage');
+  }
+
+
   async  confirmation(index: number) {
     const alert = await this.alertController.create({
       header: 'Are You Sure You Want To Delete?',
@@ -82,20 +84,20 @@ export class Tab3Page {
 
             if((data.name != null) && (data.number.length > 0)){
               if(data.name.length > 15){
-              this.showErrorToast('<ion-text color="danger"><b>Name should be greater than 15 letters</b></ion-text>');
+              this.showErrorToast('<ion-text color="danger"><b>Name should be greater than 15 letters.</b></ion-text>');
               return false;
               }
               else if(data.number.length != 11){
-              this.showErrorToast('<ion-text color="danger"><b>Number should be 11 numbers only</b></ion-text>');
+              this.showErrorToast('<ion-text color="danger"><b>Number should be 11 numbers only.</b></ion-text>');
               return false;
               }
               else if(!data.name.match(nameLetter)){
-              this.showErrorToast('<ion-text color="danger"><b>Name should be aphabet only</b></ion-text>');
+              this.showErrorToast('<ion-text color="danger"><b>Name should be aphabet only.</b></ion-text>');
               return false;
               }
               else{
                 if(data.email.length == 0){
-                  data.email = "none"
+                  data.email = "none" 
                 }
               this.contactlist.push({
                 id: data.id,
@@ -107,7 +109,7 @@ export class Tab3Page {
             }
             }
             else{
-              this.showErrorToast('<ion-text color="danger"><b>Pls fill in the blanks</b></ion-text>');
+              this.showErrorToast('<ion-text color="danger"><b>Please fill in the blanks.</b></ion-text>');
               return false;
             }
           
